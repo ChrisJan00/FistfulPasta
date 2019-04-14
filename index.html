@@ -11,18 +11,33 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="AFistfulOfPasta" startnode="17" creator="Twine" creator-version="2.2.1" ifid="3B5E9E5F-1B02-46C0-A37D-DA4D9FBEFAA1" zoom="0.25" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript">window.audio_saloon = new Audio('./Saloon_Main_Theme.mp3');
+<tw-storydata name="AFistfulOfPasta" startnode="17" creator="Twine" creator-version="2.2.1" ifid="3B5E9E5F-1B02-46C0-A37D-DA4D9FBEFAA1" zoom="0.25" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.audio_saloon = new Audio('./Saloon_Main_Theme.mp3');
 window.audio_saloon.loop=true;
 
 window.audio_duel = new Audio('./Street_Duel_Theme.mp3');
-window.audio_duel.loop=true;</script><tw-passagedata pid="1" name="Saloon" tags="" position="2299.6666666666665,109.49999999999997" size="100,100">The saloon.  
+window.audio_duel.loop=true;
+window.audio_duel.volume=0.5; // loud
+
+window.music = function(music) {
+	if (music == "saloon")
+  	window.audio_saloon.play()
+	else
+		window.audio_saloon.pause()
+	
+	if (music == "duel")
+  	window.audio_duel.play()
+	else
+		window.audio_duel.pause()
+}
+
+</script><tw-passagedata pid="1" name="Saloon" tags="" position="2299,109" size="100,100">&lt;script&gt;window.music(&quot;saloon&quot;)&lt;/script&gt;
+The saloon.  
 
 A man is playing the pianola in the background.  A cloud of smoke hovering over the heads of the customers. A couple tables of poker. In the other tables, people are talking, laughing, [[drinking]].
-
-
-&lt;script&gt;
-window.audio_saloon.play()
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="2" name="&quot;A double whiskey on the rocks, please&quot;" tags="" position="2031.6666666666667,333.16666666666663" size="100,100">There is so much tension in the saloon that you can almost breathe it.  No one moves.
+</tw-passagedata><tw-passagedata pid="2" name="&quot;A double whiskey on the rocks, please&quot;" tags="" position="2031,333" size="100,100">&lt;script&gt;window.music(&quot;none&quot;)&lt;/script&gt;
+There is so much tension in the saloon that you can almost breathe it.  No one moves.
 
 &quot;WHAT DID YOU JUST SAY?&quot; - shouts someone from the back
 &quot;Who is that?&quot; - asks the stranger.
@@ -34,7 +49,8 @@ window.audio_saloon.play()
 [[no]]
 [[maybe]]
 [[none of the above-&gt;maybe]]
-</tw-passagedata><tw-passagedata pid="3" name="&quot;A glass of fresh milk&quot;" tags="" position="1721.3333333333335,240.8333333333333" size="100,100">Everyone relaxes, and they go back to what they were doing.
+</tw-passagedata><tw-passagedata pid="3" name="&quot;A glass of fresh milk&quot;" tags="" position="1725,240" size="100,100">&lt;script&gt;window.music(&quot;saloon&quot;)&lt;/script&gt;
+Everyone relaxes, and they go back to what they were doing.
 
 The stranger is dressed like a lumberjack, but with a cowboy hat.  The pianola player is wearing a tiny cowboy hat too.  The poker players, in both tables, cowboy hats.  Everyone is wearing cowboy hats.  There is a cowboy hat hanging from the chandelier in the middle of the room. And some more in the walls, framed, as decoration, where you would ususally find deer heads.
 
@@ -45,11 +61,8 @@ He has a milk moustache now.
 He looks ridiculous.
 
 [[lick your moustache seductively-&gt;milk]]
-[[wear it proudly like a man-&gt;milk]]
-
-&lt;script&gt;
-window.audio_saloon.play()
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="4" name="&quot;Boy, suerly it&#39;s hot today, uh?&quot;" tags="" position="2301.6666666666665,475.5" size="100,100">As a matter of fact, it&#39;s raining.  And cold.
+[[wear it proudly like a man-&gt;milk]]</tw-passagedata><tw-passagedata pid="4" name="&quot;Boy, suerly it&#39;s hot today, uh?&quot;" tags="" position="2301,475" size="100,100">&lt;script&gt;window.music(&quot;none&quot;)&lt;/script&gt;
+As a matter of fact, it&#39;s raining.  And cold.
 
 Everyone can see that the stranger is lying.  What is he hiding?  Maybe he&#39;s a runaway, trying to evade justice.  Maybe there is a bounty on his head.  A big bounty.  Maybe he killed someone.  Maybe he slept with someone else&#39;s wife, and when caught, he killed the husband.  That makes prefect sense.  Otherwise, why would he say the it&#39;s hot when it&#39;s not?
 
@@ -57,7 +70,8 @@ The stranger feels awkward.  The whole room feels awkward.  The awkwardness is s
 
 [[Come up with something else to say]]
 [[Turn around and leave the saloon, leaving behind a cloud of nope-&gt;brexit]]
-</tw-passagedata><tw-passagedata pid="5" name="&quot;Ladies and gentleman, let me introduce myself&quot;" tags="" position="2698,362.8333333333333" size="100,100">From his appearance, there is nothing remarkable about the stranger.  Blue jeans, lumberjack shirt, cowboy hat, leather boots.  It would be remarkable in another setting, but this is a saloon in the far west.  So much west that you could almost say it&#39;s the east already.  People dress like cowboys all the time in here.
+</tw-passagedata><tw-passagedata pid="5" name="&quot;Ladies and gentleman, let me introduce myself&quot;" tags="" position="2698,362" size="100,100">&lt;script&gt;window.music(&quot;none&quot;)&lt;/script&gt;
+From his appearance, there is nothing remarkable about the stranger.  Blue jeans, lumberjack shirt, cowboy hat, leather boots.  It would be remarkable in another setting, but this is a saloon in the far west.  So much west that you could almost say it&#39;s the east already.  People dress like cowboys all the time in here.
 
 &quot;My name is...
 [[Jack-&gt;mynameis]]
@@ -78,16 +92,16 @@ The stranger feels awkward.  The whole room feels awkward.  The awkwardness is s
 [[Johann-&gt;mynameis]]
 [[Simon-&gt;mynameis]]
 [[Paul-&gt;mynameis]]
-&quot;</tw-passagedata><tw-passagedata pid="6" name="Come up with something else to say" tags="" position="2055.333333333333,595.8333333333333" size="100,100">&quot;The birds in this part of town are nicer!&quot;
+&quot;</tw-passagedata><tw-passagedata pid="6" name="Come up with something else to say" tags="" position="2055,595" size="100,100">&lt;script&gt;window.music(&quot;saloon&quot;)&lt;/script&gt;
+&quot;The birds in this part of town are nicer!&quot;
 
 That&#39;s the moment when all realize that the stranger is not quite sane.  But he does not seem to be too harmful either, so it&#39;s alright.  The whole story about killing someone&#39;s husband, maybe not true after all.
 
 He still feels awkward, but at least the room has calmed down.  On a quick glance, he sees two men playing poker in one of the tables.  He decides he should definitely join them, trying not to call anyone&#39;s attention any more.
 
 [[&quot;Gentlemen, may I?&quot;-&gt;poker]]
-&lt;script&gt;
-window.audio_saloon.play()
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="7" name="mynameis" tags="" position="2648,513.1666666666666" size="100,100">Everyone laughs at the stranger&#39;s name.  Which is strange on itself, because the stranger&#39;s name is not that strange after all.  They calm down and go on minding their own businesses.
+</tw-passagedata><tw-passagedata pid="7" name="mynameis" tags="" position="2648,513" size="100,100">&lt;script&gt;window.music(&quot;saloon&quot;)&lt;/script&gt;
+Everyone laughs at the stranger&#39;s name.  Which is strange on itself, because the stranger&#39;s name is not that strange after all.  They calm down and go on minding their own businesses.
 
 The stranger feels that this would be a nice time for a game of poker.  There are two tables.  One is full, but in the other one there are only two players.
 
@@ -98,10 +112,8 @@ The stranger invites himself to thhe poker table.
 &quot;Of course it is!&quot; - answers one of the men - &quot;Are you taking us for children, playing with chocolate money?&quot;
 &quot;That is very insulting, sir.  Are you trying to insult us?&quot; - adds the second one.
 [[&quot;That cannot be further from my intentions. I was considering joining your table, if I may&quot;-&gt;poker]]
-
-&lt;script&gt;
-window.audio_saloon.play()
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="8" name="drink" tags="" position="1810.666666666667,558.8333333333331" size="100,100">&quot;ALRIGHT.  I WAS JUST ASKING.&quot;
+</tw-passagedata><tw-passagedata pid="8" name="drink" tags="" position="1810,558" size="100,100">&lt;script&gt;window.music(&quot;saloon&quot;)&lt;/script&gt;
+&quot;ALRIGHT.  I WAS JUST ASKING.&quot;
 
 Everyone calms down.  The stranger is served his drink, which he sips calmly.
 
@@ -110,14 +122,13 @@ He looks at the poker tables.  In one of them, two men are playing, each one app
 He invites himself to the table.
 
 [[&quot;Dear gentlemen, may I join you for a couple of hands?&quot;-&gt;poker]]
-
-&lt;script&gt;
-window.audio_saloon.play()
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="9" name="no" tags="" position="1659.6666666666665,420.16666666666663" size="100,100">&quot;SO WHAT DID YOU ORDER?&quot;
+</tw-passagedata><tw-passagedata pid="9" name="no" tags="" position="1659,420" size="100,100">&lt;script&gt;window.music(&quot;none&quot;)&lt;/script&gt;
+&quot;SO WHAT DID YOU ORDER?&quot;
 
 [[&quot;A shot of tequila&quot;-&gt;drink]]
 [[&quot;A cold beer&quot;-&gt;drink]]
-[[&quot;Water. Just drinking water&quot;-&gt;drink]]</tw-passagedata><tw-passagedata pid="10" name="maybe" tags="" position="2108.3333333333335,457.4999999999999" size="100,100">&quot;WHAT DO YOU MEAN? DID YOU ORDER IT OR NOT?&quot;
+[[&quot;Water. Just drinking water&quot;-&gt;drink]]</tw-passagedata><tw-passagedata pid="10" name="maybe" tags="" position="2108,457" size="100,100">&lt;script&gt;window.music(&quot;none&quot;)&lt;/script&gt;
+&quot;WHAT DO YOU MEAN? DID YOU ORDER IT OR NOT?&quot;
 &quot;To be honest, I don&#39;t remember. It was a long time ago&quot;
 
 The whole room goes &quot;ooooh&quot;.  Another man talks:
@@ -131,14 +142,17 @@ Everyone is getting more and more nervous.  A fight will start at any moment.
 
 The stranger decides to do the wise thing and
 [[leave while they are distracted arguing with each other-&gt;brexit]]
-</tw-passagedata><tw-passagedata pid="11" name="poker" tags="" position="1853.6666666666667,815.1666666666665" size="100,100">Both gentlemen are experienced poker players.  One hand after another, the game appears to be even.  Each man winning here, losing there.
+</tw-passagedata><tw-passagedata pid="11" name="poker" tags="" position="1853,815" size="100,100">&lt;script&gt;window.music(&quot;saloon&quot;)&lt;/script&gt;
+Both gentlemen are experienced poker players.  One hand after another, the game appears to be even.  Each man winning here, losing there.
 
 It&#39;s after the sixth game that the stranger scores an extraordinary hand.  More luck than wits, but an impressive [[victory]] after all.
-</tw-passagedata><tw-passagedata pid="12" name="milk" tags="" position="1451.3333333333333,464.1666666666667" size="100,100">While everybody is minding their own business, the stranger walks around, glass in hand.  In one of the poker tables, two big men, big like grizzly bears, are playing.  Both of them look ferocious.  There is a lot of aggressivity in the way they hold their cards in their hands, in the way they stare each other, and in the way they stare at the stranger.
+</tw-passagedata><tw-passagedata pid="12" name="milk" tags="" position="1451,464" size="100,100">&lt;script&gt;window.music(&quot;saloon&quot;)&lt;/script&gt;
+While everybody is minding their own business, the stranger walks around, glass in hand.  In one of the poker tables, two big men, big like grizzly bears, are playing.  Both of them look ferocious.  There is a lot of aggressivity in the way they hold their cards in their hands, in the way they stare each other, and in the way they stare at the stranger.
 
 This seems the right time and place for a quick game of poker.  What can go wrong?
 
-[[&quot;Dear gentlemen, would it bother you too much if I joined your game?&quot;-&gt;poker]]</tw-passagedata><tw-passagedata pid="13" name="brexit" tags="" position="2353,857.8333333333334" size="100,100">As the stranger is walking out, another man blocks the exit.
+[[&quot;Dear gentlemen, would it bother you too much if I joined your game?&quot;-&gt;poker]]</tw-passagedata><tw-passagedata pid="13" name="brexit" tags="" position="2357,857" size="100,100">&lt;script&gt;window.music(&quot;saloon&quot;)&lt;/script&gt;
+As the stranger is walking out, another man blocks the exit.
 &quot;We meet again, Harry&quot;
 &quot;Wait, who is Harry?&quot;
 &quot;Don&#39;t play fool. We both know what you did that night&quot;
@@ -151,23 +165,20 @@ This seems the right time and place for a quick game of poker.  What can go wron
 The crowd explodes with joy - &quot;DUEL! IT&#39;S GOING TO BE A DUEL EVERYBODY!&quot;
 There is no way out of this situation.
 [[Leave to the street and face your destiny-&gt;duel]]
-</tw-passagedata><tw-passagedata pid="14" name="duel" tags="" position="2165,1210.8333333333335" size="100,100">The stranger walks outside.  The town is gathered, eager for the show. The opponent is waiting.
+</tw-passagedata><tw-passagedata pid="14" name="duel" tags="" position="2157,1206" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
+The stranger walks outside.  The town is gathered, eager for the show. The opponent is waiting.
 
 Step by step, the stranger walks to the middle of the street.  Only a fistful of yards between the [[two men]].
-
-&lt;script&gt;
-window.audio_duel.play()
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="15" name="drinking" tags="" position="2299.6666666666665,259.5" size="100,100">Then, silence.  A stranger has just walked in.  Everyone turns around.  You can hear a fly passing.
+</tw-passagedata><tw-passagedata pid="15" name="drinking" tags="" position="2295,259" size="100,100">&lt;script&gt;window.music(&quot;none&quot;)&lt;/script&gt;
+Then, silence.  A stranger has just walked in.  Everyone turns around.  You can hear a fly passing.
 
 He walks to the bar.
 [[&quot;A double whiskey on the rocks, please&quot;]]
 [[&quot;A glass of fresh milk&quot;]]
 [[&quot;Boy, suerly it&#39;s hot today, uh?&quot;]]
 [[&quot;Ladies and gentleman, let me introduce myself&quot;]]
-
-&lt;script&gt;
-window.audio_saloon.pause()
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="16" name="victory" tags="" position="1893.6666666666667,993.1666666666665" size="100,100">&quot;YOU CHEATER&quot; - shouts one of the men, his face red with rage. &quot;I SAW YOU!&quot;
+</tw-passagedata><tw-passagedata pid="16" name="victory" tags="" position="1893,993" size="100,100">&lt;script&gt;window.music(&quot;saloon&quot;)&lt;/script&gt;
+&quot;YOU CHEATER&quot; - shouts one of the men, his face red with rage. &quot;I SAW YOU!&quot;
 &quot;Please, mister. I was only lucky.&quot;
 &quot;MY ASS, LUCKY!&quot; - the man stands up, in all his spectacular height. - &quot;YOU JUST CHEATED! ADMIT IT!&quot;.
 The other man is silent.
@@ -177,102 +188,115 @@ The other man is silent.
 &quot;WE WILL RESOLVE IT LIKE REAL MEN!&quot;
 
 The enraged poker player storms out of the saloon.
-[[Follow him and face your destiny-&gt;duel]]</tw-passagedata><tw-passagedata pid="17" name="Cover" tags="" position="2099.666666666667,38" size="100,100">&lt;img src=&quot;AfistfulOFpasta_blackBG.png&quot; /&gt;
+[[Follow him and face your destiny-&gt;duel]]</tw-passagedata><tw-passagedata pid="17" name="Cover" tags="" position="2099,38" size="100,100">&lt;script&gt;window.music(&quot;none&quot;)&lt;/script&gt;
+
+&lt;img src=&quot;AfistfulOFpasta_blackBG.png&quot; style=&quot;width:100%&quot;/&gt;
 Berlin Mini Game Jam A MAZE edition
 April 2019
 
 Concept &amp; Music: Tommy Friese
 Text: Christiaan Janssen
 
-[[Enter the saloon-&gt;Saloon]]</tw-passagedata><tw-passagedata pid="18" name="two men" tags="" position="2165,1360.8333333333335" size="100,100">The townsmen have brought the stoves.  Placed them carefully next to each other.  Each stove with a good pile of wood on the side.  Each stove with a tall pot, full of water, ready to be boiled.
+[[Enter the saloon-&gt;Saloon]]</tw-passagedata><tw-passagedata pid="18" name="two men" tags="" position="2165,1360" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
+The townsmen have brought the stoves.  Placed them carefully next to each other.  Each stove with a good pile of wood on the side.  Each stove with a tall pot, full of water, ready to be boiled.
 
 It&#39;s going to be a brutal duel. One man will conquer. Defeat.  Destroy. Humiliate.
 
 It&#39;s going to be a cooking duel.  A cook-out.
 
-It&#39;s going to be [[Penne alla arrabiatta]]</tw-passagedata><tw-passagedata pid="19" name="Penne alla arrabiatta" tags="" position="2165,1510.8333333333335" size="100,100">Swiftly, each man runs to his assigned stove and starts throwung wood in.  A good fire will make the water boil good.
+It&#39;s going to be [[Penne alla arrabiatta]]</tw-passagedata><tw-passagedata pid="19" name="Penne alla arrabiatta" tags="" position="2157,1506" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
+Swiftly, each man runs to his assigned stove and starts throwung wood in.  A good fire will make the water boil good.
 
 The opponent stares at the stranger fiercely.  The water gains one degree.  The opponent stares even more fiercely.  The water warms up a little more. It is an intense duel.
 
 [[Throw the penne in already, it will boil eventually]]
 [[No! The water has to boil first! Start cutting garlic and chilli for the sauce-&gt;chopchop]]
-[[Stare back even more fiercely, only fierce stares can win this duel-&gt;stare-off]]</tw-passagedata><tw-passagedata pid="20" name="Throw the penne in already, it will boil eventually" tags="" position="1835,1532.8333333333335" size="100,100">Seriously?
+[[Stare back even more fiercely, only fierce stares can win this duel-&gt;stare-off]]</tw-passagedata><tw-passagedata pid="20" name="Throw the penne in already, it will boil eventually" tags="" position="1835,1532" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
+Seriously?
 
 [[YES! Rules are made to be broken!-&gt;throwit]]
 [[On a second thought, let&#39;s just wait for the water to boil before doing anything-&gt;stare-off]]
-[[Or maybe let&#39;s start chopping vegetebles-&gt;chopchop]]</tw-passagedata><tw-passagedata pid="21" name="throwit" tags="" position="1553,1550.8333333333335" size="100,100">Really? That is disgusting!
+[[Or maybe let&#39;s start chopping vegetebles-&gt;chopchop]]</tw-passagedata><tw-passagedata pid="21" name="throwit" tags="" position="1553,1550" size="100,100">&lt;script&gt;window.music(&quot;none&quot;)&lt;/script&gt;
+Really? That is disgusting!
 
 There is no point in continuing this story.  The stranger loses the duel and leaves the town in shame.
 
 THE END
-
-&lt;script&gt;
-window.audio_duel.pause()
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="22" name="stare-off" tags="" position="1991,1890.8333333333335" size="100,100">The stranger is not intimidated.  Not one bit.  He stands behind his pot and stares at the opponent with fearsome intensity.  The water keeps warming up.
+</tw-passagedata><tw-passagedata pid="22" name="stare-off" tags="" position="1991,1890" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
+The stranger is not intimidated.  Not one bit.  He stands behind his pot and stares at the opponent with fearsome intensity.  The water keeps warming up.
 
 Both men are now staring at each other, and it is as if knives were being thrown out of their eyes.  In both pots, the water goes &quot;blop!&quot;.  The men lose awareness of their surroundings.  The street, the town, they banish.  There&#39;s only the two men and the two stoves.
 
 The stranger&#39;s water starts boiling! Ha! His stare was more intense after all!
 
-Quick! [[throw the pasta in]]</tw-passagedata><tw-passagedata pid="23" name="chopchop" tags="" position="2433,1862.8333333333335" size="100,100">The stranger does not fall for the provocation.  He picks a clove of garlic and starts chopping it.  He brought his own cooking knife, forged at the fires of mount Teufelsberg, the mountain of the devil, across the ocean.  But that is another story, and shall be told in another time.
+Quick! [[throw the pasta in]]</tw-passagedata><tw-passagedata pid="23" name="chopchop" tags="" position="2433,1862" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
+The stranger does not fall for the provocation.  He picks a clove of garlic and starts chopping it.  He brought his own cooking knife, forged at the fires of mount Teufelsberg, the mountain of the devil, across the ocean.  But that is another story, and shall be told in another time.
 
 A second clove of garlic is obliterated under the devil&#39;s knife, and then two hot chilli peppers come after them.  Directly imported from the land of the mexicans, the finest, reddest of their species.  And turned into a fine mist of delicious [[spiciness]].
 
-</tw-passagedata><tw-passagedata pid="24" name="throw the pasta in" tags="" position="1731,2060.8333333333335" size="100,100">&#39;&#39;A fistful of pasta&#39;&#39; goes into the stranger&#39;s pot.  Penne rigate. The arrabiatta sauce will fill in the crevices of the rugged surface.
+</tw-passagedata><tw-passagedata pid="24" name="throw the pasta in" tags="" position="1731,2060" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
+&#39;&#39;A fistful of pasta&#39;&#39; goes into the stranger&#39;s pot.  Penne rigate. The arrabiatta sauce will fill in the crevices of the rugged surface.
 
 &quot;HA! Great mistake!&quot; - laughs the opponent.  He might have lost the staring contest, but he knows that, for the arrabiatta, penne lisce is the way to go.
 
-As the water of the opponent is starting to boil, the stranger is already cutting the vegetables to prepare the [[sauce-&gt;spiciness]].</tw-passagedata><tw-passagedata pid="25" name="spiciness" tags="" position="2437,2096.8333333333335" size="100,100">The opponent can&#39;t believe what he is seeing.  The stranger is cooking instead of staring back!  What an insult!  What a fool!  Everyone knows that staring always wins against actually cooking!
+As the water of the opponent is starting to boil, the stranger is already cutting the vegetables to prepare the [[sauce-&gt;spiciness]].</tw-passagedata><tw-passagedata pid="25" name="spiciness" tags="" position="2437,2096" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
+The opponent can&#39;t believe what he is seeing.  The stranger is cooking instead of staring back!  What an insult!  What a fool!  Everyone knows that staring always wins against actually cooking!
 
 But now is the moment of truth. The definitive choice that will make it or break it. The arrabiatta sauce is made in a saucepan, with a bit of oil.  But what kind of oil?
 [[Sunflower oil, of course!-&gt;sunflower]]
 [[&quot;Vegetable oil&quot;, also known as rapsoel or colza oil-&gt;rapsol]]
 [[olive oil]]
-[[hemp oil]]</tw-passagedata><tw-passagedata pid="26" name="sunflower" tags="" position="2212,2250.8333333333335" size="100,100">The stranger has been using sunflower oil and only sunflower oil all his life.  There is no other option.
+[[hemp oil]]</tw-passagedata><tw-passagedata pid="26" name="sunflower" tags="" position="2212,2250" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
+The stranger has been using sunflower oil and only sunflower oil all his life.  There is no other option.
 
 The vegetables fry just well.  His water has started boiling, so he throws the pasta in.  8 minutes.
 
-Meanwhile, he glances the opponent for a second.  He&#39;s already midway into boiling the penne.  Apparently the intense staring did something.  He&#39;s just preparing the arrabiatta sauce.  Better [[hurry up!-&gt;sunflower_done]]</tw-passagedata><tw-passagedata pid="27" name="rapsol" tags="" position="2362,2250.8333333333335" size="100,100">Colza oil does not have the best of reputations.  But that is because people don&#39;t know how to use it properly. That&#39;s what the stranger thinks. Sometimes he thinks stranger things.
+Meanwhile, he glances the opponent for a second.  He&#39;s already midway into boiling the penne.  Apparently the intense staring did something.  He&#39;s just preparing the arrabiatta sauce.  Better [[hurry up-&gt;sunflower done]]!</tw-passagedata><tw-passagedata pid="27" name="rapsol" tags="" position="2362,2250" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
+Colza oil does not have the best of reputations.  But that is because people don&#39;t know how to use it properly. That&#39;s what the stranger thinks. Sometimes he thinks stranger things.
 
 The vegetables fry just well.  His water has started boiling, so he throws the pasta in.  8 minutes.
 
-Meanwhile, he glances the opponent for a second.  He&#39;s already midway into boiling the penne.  Apparently the intense staring did something.  He&#39;s just preparing the arrabiatta sauce.  Better [[hurry up!-&gt;sunflower_done]]</tw-passagedata><tw-passagedata pid="28" name="olive oil" tags="" position="2512,2250.8333333333335" size="100,100">The recipe for this dish is coming from the Mediterranean.  And thus only the authentic oil from the mediterranean shall be used! Olive oil it is!
+Meanwhile, he glances the opponent for a second.  He&#39;s already midway into boiling the penne.  Apparently the intense staring did something.  He&#39;s just preparing the arrabiatta sauce.  Better [[hurry up-&gt;sunflower done]]!</tw-passagedata><tw-passagedata pid="28" name="olive oil" tags="" position="2512,2250" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
+The recipe for this dish is coming from the Mediterranean.  And thus only the authentic oil from the mediterranean shall be used! Olive oil it is!
 
 The vegetables fry just well.  His water has started boiling, so he throws the pasta in.  8 minutes.
 
-Meanwhile, he glances the opponent for a second.  He&#39;s already midway into boiling the penne.  Apparently the intense staring did something.  He&#39;s just preparing the arrabiatta sauce.  Better [[hurry up!-&gt;olive_done]]</tw-passagedata><tw-passagedata pid="29" name="hemp oil" tags="" position="2662,2250.8333333333335" size="100,100">That is the secret weapon!  No one suspects anything.  They will love it, and they don&#39;t know why.
+Meanwhile, he glances the opponent for a second.  He&#39;s already midway into boiling the penne.  Apparently the intense staring did something.  He&#39;s just preparing the arrabiatta sauce.  Better [[hurry up-&gt;olive done]]!</tw-passagedata><tw-passagedata pid="29" name="hemp oil" tags="" position="2662,2250" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
+That is the secret weapon!  No one suspects anything.  They will love it, and they don&#39;t know why.
 
 The vegetables fry just well.  His water has started boiling, so he throws the pasta in.  8 minutes.
 
-Meanwhile, he glances the opponent for a second.  He&#39;s already midway into boiling the penne.  Apparently the intense staring did something.  He&#39;s just preparing the arrabiatta sauce.  Better [[hurry up!-&gt;hemp_done]]</tw-passagedata><tw-passagedata pid="30" name="sunflower_done" tags="" position="2268,2456.8333333333335" size="100,100">As the opponent is finishing his dish, the stranger is just shortly behind.  But it&#39;s about the taste, not about the speed.
+Meanwhile, he glances the opponent for a second.  He&#39;s already midway into boiling the penne.  Apparently the intense staring did something.  He&#39;s just preparing the arrabiatta sauce.  Better [[hurry up-&gt;hemp done]]!</tw-passagedata><tw-passagedata pid="30" name="sunflower done" tags="" position="2268,2456" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
+As the opponent is finishing his dish, the stranger is just shortly behind.  But it&#39;s about the taste, not about the speed.
 
 An ad-hoc jury has been formed.  The town mayor is there, and the lady who sells flowers, and the other lady who also sells flowers, and the pianist of the saloon, who does not sell flowers.
 
 They start tasting the opponent&#39;s pasta.  Ooooooh! So spicy!! So intense!  Intense as the stare of a person who stares intensely!
 
-Then it&#39;s the turn of the [[stranger&#39;s pasta-&gt;sunflower_fail]].</tw-passagedata><tw-passagedata pid="31" name="hemp_done" tags="" position="2662,2400.8333333333335" size="100,100">As the opponent is finishing his dish, the stranger is just shortly behind.  But it&#39;s about the taste, not about the speed.
+Then it&#39;s the turn of the stranger&#39;s [[pasta-&gt;sunflower fail]].</tw-passagedata><tw-passagedata pid="31" name="hemp done" tags="" position="2662,2400" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
+As the opponent is finishing his dish, the stranger is just shortly behind.  But it&#39;s about the taste, not about the speed.
 
 An ad-hoc jury has been formed.  The town mayor is there, and the lady who sells flowers, and the other lady who also sells flowers, and the pianist of the saloon, who does not sell flowers.
 
 They start tasting the opponent&#39;s pasta.  Ooooooh! So spicy!! So intense!  Intense as the stare of a person who stares intensely!
 
-Then it&#39;s the turn of the [[stranger&#39;s pasta-&gt;hemp_fail]].</tw-passagedata><tw-passagedata pid="32" name="olive_done" tags="" position="2512,2400.8333333333335" size="100,100">As the opponent is finishing his dish, the stranger is just shortly behind.  But it&#39;s about the taste, not about the speed.
+Then it&#39;s the turn of the  stranger&#39;s [[pasta-&gt;hemp fail]].</tw-passagedata><tw-passagedata pid="32" name="olive done" tags="" position="2512,2400" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
+As the opponent is finishing his dish, the stranger is just shortly behind.  But it&#39;s about the taste, not about the speed.
 
 An ad-hoc jury has been formed.  The town mayor is there, and the lady who sells flowers, and the other lady who also sells flowers, and the pianist of the saloon, who does not sell flowers.
 
 They start tasting the opponent&#39;s pasta.  Ooooooh! So spicy!! So intense!  Intense as the stare of a person who stares intensely!
 
-Then it&#39;s the turn of the [[stranger&#39;s pasta-&gt;olive_win]].</tw-passagedata><tw-passagedata pid="33" name="sunflower_fail" tags="" position="2268,2606.8333333333335" size="100,100">And it&#39;s... fine.  They don&#39;t dislike it, but it&#39;s kind of bland.
+Then it&#39;s the turn of the stranger&#39;s [[pasta-&gt;olive win]].</tw-passagedata><tw-passagedata pid="33" name="sunflower fail" tags="" position="2268,2606" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
+And it&#39;s... fine.  They don&#39;t dislike it, but it&#39;s kind of bland.
 
 The winner is clear.  Everyone agrees.
 
 The stranger leaves the town in shame.
 
 THE END
-
-&lt;script&gt;
-window.audio_duel.pause()
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="34" name="hemp_fail" tags="" position="2662,2550.8333333333335" size="100,100">At first, the pasta is... just fine.  Unremarkable.  There is certain spiciness to it, but nothing compared to the other dish.
+</tw-passagedata><tw-passagedata pid="34" name="hemp fail" tags="" position="2674,2566" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
+At first, the pasta is... just fine.  Unremarkable.  There is certain spiciness to it, but nothing compared to the other dish.
 
 And then, the major starts smiling.  Then laughing.  HAHAHAHA.  The ladies start laughing too, and the piano player.  And their laughter is contageous, and soon the whole town is laughing and laughing.
 
@@ -281,10 +305,8 @@ And in the midst of all this laughter, the stranger and the opponent make peace,
 The legend says, they are still friends to this day.
 
 THE END
-
-&lt;script&gt;
-window.audio_duel.pause()
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="35" name="olive_win" tags="" position="2512,2550.8333333333335" size="100,100">When they taste the stranger&#39;s penne, something happens.  Something special. It&#39;s the sauce.  It&#39;s special.  Tasty, and spicy, but with a point of... joy.
+</tw-passagedata><tw-passagedata pid="35" name="olive win" tags="" position="2512,2550" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
+When they taste the stranger&#39;s penne, something happens.  Something special. It&#39;s the sauce.  It&#39;s special.  Tasty, and spicy, but with a point of... joy.
 
 The battle has been very balanced, but at the end there is a clear winner.  The stranger&#39;s pasta is just better.
 
@@ -292,10 +314,7 @@ The opponent leaves in shame, never to be seen again.
 The stranger is appointed sheriff of the town.
 
 THE END
-
-&lt;script&gt;
-window.audio_duel.pause()
-&lt;/script&gt;</tw-passagedata></tw-storydata>
+</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
