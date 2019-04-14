@@ -13,6 +13,7 @@
 
 <tw-storydata name="AFistfulOfPasta" startnode="17" creator="Twine" creator-version="2.2.1" ifid="3B5E9E5F-1B02-46C0-A37D-DA4D9FBEFAA1" zoom="0.25" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">window.audio_saloon = new Audio('./Saloon_Main_Theme.mp3');
 window.audio_saloon.loop=true;
 
@@ -31,6 +32,7 @@ window.music = function(music) {
 	else
 		window.audio_duel.pause()
 }
+
 
 </script><tw-passagedata pid="1" name="Saloon" tags="" position="2299,109" size="100,100">&lt;script&gt;window.music(&quot;saloon&quot;)&lt;/script&gt;
 The saloon.  
@@ -222,24 +224,25 @@ Really? That is disgusting!
 There is no point in continuing this story.  The stranger loses the duel and leaves the town in shame.
 
 THE END
-</tw-passagedata><tw-passagedata pid="22" name="stare-off" tags="" position="1991,1890" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
+</tw-passagedata><tw-passagedata pid="22" name="stare-off" tags="" position="1983,1838" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
 The stranger is not intimidated.  Not one bit.  He stands behind his pot and stares at the opponent with fearsome intensity.  The water keeps warming up.
 
 Both men are now staring at each other, and it is as if knives were being thrown out of their eyes.  In both pots, the water goes &quot;blop!&quot;.  The men lose awareness of their surroundings.  The street, the town, they banish.  There&#39;s only the two men and the two stoves.
 
 The stranger&#39;s water starts boiling! Ha! His stare was more intense after all!
 
-Quick! [[throw the pasta in]]</tw-passagedata><tw-passagedata pid="23" name="chopchop" tags="" position="2433,1862" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
+Quick! [[throw the pasta in]]
+(set: $pastafirst to true)</tw-passagedata><tw-passagedata pid="23" name="chopchop" tags="" position="2437,1858" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
 The stranger does not fall for the provocation.  He picks a clove of garlic and starts chopping it.  He brought his own cooking knife, forged at the fires of mount Teufelsberg, the mountain of the devil, across the ocean.  But that is another story, and shall be told in another time.
 
 A second clove of garlic is obliterated under the devil&#39;s knife, and then two hot chilli peppers come after them.  Directly imported from the land of the mexicans, the finest, reddest of their species.  And turned into a fine mist of delicious [[spiciness]].
 
-</tw-passagedata><tw-passagedata pid="24" name="throw the pasta in" tags="" position="1731,2060" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
+(set: $pastafirst to false)</tw-passagedata><tw-passagedata pid="24" name="throw the pasta in" tags="" position="1975,1996" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
 &#39;&#39;A fistful of pasta&#39;&#39; goes into the stranger&#39;s pot.  Penne rigate. The arrabiatta sauce will fill in the crevices of the rugged surface.
 
 &quot;HA! Great mistake!&quot; - laughs the opponent.  He might have lost the staring contest, but he knows that, for the arrabiatta, penne lisce is the way to go.
 
-As the water of the opponent is starting to boil, the stranger is already cutting the vegetables to prepare the [[sauce-&gt;spiciness]].</tw-passagedata><tw-passagedata pid="25" name="spiciness" tags="" position="2437,2096" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
+As the water of the opponent is starting to boil, the stranger is already cutting the vegetables to prepare the [[sauce-&gt;pastwo]].</tw-passagedata><tw-passagedata pid="25" name="spiciness" tags="" position="2601,2016" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
 The opponent can&#39;t believe what he is seeing.  The stranger is cooking instead of staring back!  What an insult!  What a fool!  Everyone knows that staring always wins against actually cooking!
 
 But now is the moment of truth. The definitive choice that will make it or break it. The arrabiatta sauce is made in a saucepan, with a bit of oil.  But what kind of oil?
@@ -249,22 +252,22 @@ But now is the moment of truth. The definitive choice that will make it or break
 [[hemp oil]]</tw-passagedata><tw-passagedata pid="26" name="sunflower" tags="" position="2212,2250" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
 The stranger has been using sunflower oil and only sunflower oil all his life.  There is no other option.
 
-The vegetables fry just well.  His water has started boiling, so he throws the pasta in.  8 minutes.
+The vegetables fry just well.  (if: $pastafirst is true)[And the pasta is cooked, just in time.  Everything is going perfectly.](else:)[His water has started boiling, so he throws the pasta in.  8 minutes.]
 
 Meanwhile, he glances the opponent for a second.  He&#39;s already midway into boiling the penne.  Apparently the intense staring did something.  He&#39;s just preparing the arrabiatta sauce.  Better [[hurry up-&gt;sunflower done]]!</tw-passagedata><tw-passagedata pid="27" name="rapsol" tags="" position="2362,2250" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
 Colza oil does not have the best of reputations.  But that is because people don&#39;t know how to use it properly. That&#39;s what the stranger thinks. Sometimes he thinks stranger things.
 
-The vegetables fry just well.  His water has started boiling, so he throws the pasta in.  8 minutes.
+The vegetables fry just well. (if: $pastafirst is true)[And the pasta is cooked, just in time.  Everything is going perfectly.](else:)[His water has started boiling, so he throws the pasta in.  8 minutes.]
 
 Meanwhile, he glances the opponent for a second.  He&#39;s already midway into boiling the penne.  Apparently the intense staring did something.  He&#39;s just preparing the arrabiatta sauce.  Better [[hurry up-&gt;sunflower done]]!</tw-passagedata><tw-passagedata pid="28" name="olive oil" tags="" position="2512,2250" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
 The recipe for this dish is coming from the Mediterranean.  And thus only the authentic oil from the mediterranean shall be used! Olive oil it is!
 
-The vegetables fry just well.  His water has started boiling, so he throws the pasta in.  8 minutes.
+The vegetables fry just well. (if: $pastafirst is true)[And the pasta is cooked, just in time.  Everything is going perfectly.](else:)[His water has started boiling, so he throws the pasta in.  8 minutes.]
 
 Meanwhile, he glances the opponent for a second.  He&#39;s already midway into boiling the penne.  Apparently the intense staring did something.  He&#39;s just preparing the arrabiatta sauce.  Better [[hurry up-&gt;olive done]]!</tw-passagedata><tw-passagedata pid="29" name="hemp oil" tags="" position="2662,2250" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
 That is the secret weapon!  No one suspects anything.  They will love it, and they don&#39;t know why.
 
-The vegetables fry just well.  His water has started boiling, so he throws the pasta in.  8 minutes.
+The vegetables fry just well. (if: $pastafirst is true)[And the pasta is cooked, just in time.  Everything is going perfectly.](else:)[His water has started boiling, so he throws the pasta in.  8 minutes.]
 
 Meanwhile, he glances the opponent for a second.  He&#39;s already midway into boiling the penne.  Apparently the intense staring did something.  He&#39;s just preparing the arrabiatta sauce.  Better [[hurry up-&gt;hemp done]]!</tw-passagedata><tw-passagedata pid="30" name="sunflower done" tags="" position="2268,2456" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
 As the opponent is finishing his dish, the stranger is just shortly behind.  But it&#39;s about the taste, not about the speed.
@@ -295,7 +298,7 @@ The winner is clear.  Everyone agrees.
 The stranger leaves the town in shame.
 
 THE END
-</tw-passagedata><tw-passagedata pid="34" name="hemp fail" tags="" position="2674,2566" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
+</tw-passagedata><tw-passagedata pid="34" name="hemp fail" tags="" position="2682,2626" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
 At first, the pasta is... just fine.  Unremarkable.  There is certain spiciness to it, but nothing compared to the other dish.
 
 And then, the major starts smiling.  Then laughing.  HAHAHAHA.  The ladies start laughing too, and the piano player.  And their laughter is contageous, and soon the whole town is laughing and laughing.
@@ -305,7 +308,7 @@ And in the midst of all this laughter, the stranger and the opponent make peace,
 The legend says, they are still friends to this day.
 
 THE END
-</tw-passagedata><tw-passagedata pid="35" name="olive win" tags="" position="2512,2550" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
+</tw-passagedata><tw-passagedata pid="35" name="olive win" tags="" position="2472,2602" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
 When they taste the stranger&#39;s penne, something happens.  Something special. It&#39;s the sauce.  It&#39;s special.  Tasty, and spicy, but with a point of... joy.
 
 The battle has been very balanced, but at the end there is a clear winner.  The stranger&#39;s pasta is just better.
@@ -314,7 +317,18 @@ The opponent leaves in shame, never to be seen again.
 The stranger is appointed sheriff of the town.
 
 THE END
-</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="36" name="pastwo" tags="" position="2183,2062" size="100,100">&lt;script&gt;window.music(&quot;duel&quot;)&lt;/script&gt;
+The stranger starts cutting garlic and chili peppers. Thin. Suddenly... a flashback!
+
+The stranger is a child again. Playing with his brothers and sisters.  Eight boys, five girls. His father, the pastor, is in the church that day. Suddenly, the stranger falls in the mud, head first.  His brothers and sisters are laughing.  Mama is not there.  She went to the river...
+
+The memory vanishes, and stranger remembers that he is cooking penne alla arrabiatta.  No time for childhood trauma now!
+
+It&#39;s the moment of truth. The definitive choice that will make it or break it. The arrabiatta sauce is made in a saucepan, with a bit of oil.  But what kind of oil?
+[[Sunflower oil, of course!-&gt;sunflower]]
+[[&quot;Vegetable oil&quot;, also known as rapsoel or colza oil-&gt;rapsol]]
+[[olive oil]]
+[[hemp oil]]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
